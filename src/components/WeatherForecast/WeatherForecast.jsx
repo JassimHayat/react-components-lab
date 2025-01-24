@@ -1,27 +1,23 @@
-import "./weatherForecast.css"
+import "./WeatherForecast.css";
 
+import WeatherIcon from "./Child-Components/WeatherIcon";
+import WeatherData from "./Child-Components/WeatherData";
 
-
-import WeatherIcon from "./Child-Components/WeatherIcon"
-
-const WeatherForecast = (props) => {
+const WeatherForecasts = (props) => {
     return (
 
         <div className="weather">   
-        <h2>{props.day}</h2>
-        <img src={props.img}  alt={props.imgAlt} />
-  
-  
-     <p>  
-    <span>conditions: </span>{props.conditions}
-    </p>
+ 
 
+ <WeatherData day={props.day} />
+            <WeatherIcon img={props.img} imgAlt={props.imgAlt} />
+            <WeatherData conditions={props.conditions} time={props.time} />
 
-  <p><span>time: </span>{props.time}</p>
-    
-    </div>
-    )
+        </div>
+
+    );
 }
 
 
-export default WeatherForecast;
+
+export default WeatherForecasts;

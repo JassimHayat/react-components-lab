@@ -1,11 +1,9 @@
-///import { useState } from 'react'
-///import reactLogo from './assets/react.svg'
-///import viteLogo from '/vite.svg'
-import './App.css'
-import './components/WeatherForecast/WeatherForecast.css'; // For WeatherForcast.css
-import './components/WeatherForecast/WeatherForecast'; // For WeatherForcast.jsx
 
-const App = () => {
+import './App.css'
+// import './components/WeatherForecast/WeatherForecast.css'; // For WeatherForcast.css
+import WeatherForecasts from "./components/WeatherForecast/WeatherForecast"; // For WeatherForcast.jsx
+
+const App = () => { 
 
   
 
@@ -52,25 +50,33 @@ const App = () => {
     <>
     <h1>Local Weather</h1>
     <section>
-      
-      {weatherForecasts.map((forcast, index)=> (
-        <weatherForecast
-
-        key = {index}
-
-          day = {forcast.day}
-          img = {forcast.img}
-          imgAlt = {forcast.imgAlt}
-          conditions = {forcast.conditions}
-          time={forcast.time}
-
-          />
-      ))}
-
+      {weatherForecasts.map((weatherForecast,index) => (
+      <WeatherForecasts  key={index} {...weatherForecast}/>
+    ))}
     </section>
-    </>
-    
+  </>
 
+  // return (
+  //   <>
+  //   <h1>Local Weather</h1>
+  //   <section>
+      
+  //     {weatherForecasts.map((weatherForecasts, index)=> (
+  //       <WeatherForecasts
+
+  //       key = {index}
+
+  //         day = {forcast.day}
+  //         img = {forcast.img}
+  //         imgAlt = {forcast.imgAlt}
+  //         conditions = {forcast.conditions}
+  //         time={forcast.time}
+
+  //         />
+  //     ))}
+
+  //   </section>
+  //   </>
 
   );
 }
