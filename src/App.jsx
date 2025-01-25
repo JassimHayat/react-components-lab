@@ -44,7 +44,7 @@ const App = () => {
       time: 'Night',
     },
   ];
-  
+
 
   return (
     <>
@@ -59,30 +59,8 @@ const App = () => {
     </section>
   </>
 
-  // return (
-  //   <>
-  //   <h1>Local Weather</h1>
-  //   <section>
-      
-  //     {weatherForecasts.map((weatherForecasts, index)=> (
-  //       <WeatherForecasts
-
-  //       key = {index}
-
-  //         day = {forcast.day}
-  //         img = {forcast.img}
-  //         imgAlt = {forcast.imgAlt}
-  //         conditions = {forcast.conditions}
-  //         time={forcast.time}
-
-  //         />
-  //     ))}
-
-  //   </section>
-  //   </>
-
   );
-}
+};
 
 
 export default App;

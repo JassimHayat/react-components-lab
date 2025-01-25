@@ -13,12 +13,14 @@ const WeatherForecasts = (props) => {
         <WeatherData
                  day = {props.day} />
 
+                <WeatherIcon 
+                img = {props.img}   imgAlt={props.imgAlt} />
+
             <WeatherData
                 time = {props.time}
                 conditions = {props.conditions} />
 
-            <WeatherIcon 
-                img = {props.img}   imgAlt={props.imgAlt} />
+          
         </div>
 
 
