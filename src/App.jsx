@@ -51,7 +51,10 @@ const App = () => {
     <h1>Local Weather</h1>
     <section>
       {weatherForecasts.map((weatherForecast,index) => (
-      <WeatherForecasts  key={index} {...weatherForecast}/>
+          
+        <WeatherForecasts  
+             key={index} {...weatherForecast}/>
+                      
     ))}
     </section>
   </>
